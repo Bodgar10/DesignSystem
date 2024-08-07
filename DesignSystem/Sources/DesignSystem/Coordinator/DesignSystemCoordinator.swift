@@ -21,8 +21,6 @@ public class DesignSystemCoordinator: DesignSystemCoordinatorProtocol {
         self.path = path
         self.configuration = configuration
         self.bundleMainApp = bundleMainApp
-        
-        print("SUBIENDO ESTO...")
     }
     
     // MARK: - Functions
