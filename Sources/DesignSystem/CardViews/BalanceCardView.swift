@@ -98,6 +98,7 @@ public struct BalanceCardView: View {
                 }
                 .padding(.top)
             }
+            .frame(maxWidth: .infinity)
         }
         .padding()
     }
