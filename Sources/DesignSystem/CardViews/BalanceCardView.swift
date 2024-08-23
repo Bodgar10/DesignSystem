@@ -15,6 +15,8 @@ public struct BalanceCardView: View {
     private let secondaryButtonTitle: TextConfiguration
     private let principalButtonBackground: Color
     private let secondaryButtonBackground: Color
+    private var callbackFirstButton: (() -> Void)
+    private var callbackSecondButton: (() -> Void)
     
     /// Initializes a `BalanceCardView` with the specified configurations for title, subtitle, and buttons.
     ///
@@ -73,30 +75,36 @@ public struct BalanceCardView: View {
         principalButtonTitle: TextConfiguration,
         secondaryButtonTitle: TextConfiguration,
         principalButtonBackground: Color,
-        secondaryButtonBackground: Color) {
-        self.title = title
-        self.subtitle = subtitle
-        self.principalButtonTitle = principalButtonTitle
-        self.secondaryButtonTitle = secondaryButtonTitle
-        self.principalButtonBackground = principalButtonBackground
-        self.secondaryButtonBackground = secondaryButtonBackground
+        secondaryButtonBackground: Color,
+        callbackFirstButton: @escaping (() -> Void) = {},
+        callbackSecondButton: @escaping (() -> Void) = {}) {
+            self.title = title
+            self.subtitle = subtitle
+            self.principalButtonTitle = principalButtonTitle
+            self.secondaryButtonTitle = secondaryButtonTitle
+            self.principalButtonBackground = principalButtonBackground
+            self.secondaryButtonBackground = secondaryButtonBackground
+            self.callbackFirstButton = callbackFirstButton
+            self.callbackSecondButton = callbackSecondButton
     }
     
     public var body: some View {
         CardView(cornerRadius: .medium, shadowRadius: .xSmall, padding: .large) {
             VStack(alignment: .leading, spacing: Sizes.medium.rawValue) {
                 GenericText(configuration: title)
+                    .padding(.leading, -30)
                 GenericText(configuration: subtitle)
+                    .padding(.leading, -30)
                 HStack {
                     RoundedButton(textConfiguration: principalButtonTitle, backgroundColor: principalButtonBackground) {
-                        
+                        callbackFirstButton()
                     }
                     
                     RoundedButton(textConfiguration: secondaryButtonTitle, backgroundColor: secondaryButtonBackground) {
-                        
+                        callbackSecondButton()
                     }
                 }
-                .padding(.top)
+                .padding(.top, 5)
             }
             .frame(maxWidth: .infinity)
         }
