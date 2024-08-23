@@ -53,10 +53,6 @@ public struct CellInfoView: View {
         }
         .frame(maxWidth: .infinity)
         .padding(.top)
-        .padding(.bottom)
-        Divider()
-            .padding(.leading)
-            .padding(.trailing)
     }
 }
 
