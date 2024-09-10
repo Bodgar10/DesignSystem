@@ -30,6 +30,7 @@ struct ContentView: View {
                 NavigationLink(destination: TextComponentDemoview()) { Text("03 - Texts") }
                 NavigationLink(destination: CellsComponentDemoview()) { Text("04 - Cells") }
                 NavigationLink(destination: BalanceCardViewComponentDemoview()) { Text("05 - Balance Card View") }
+                NavigationLink(destination: ErrorComponentDemoView()) { Text("06 - Error View") }
             }
             .navigationBarTitle("Components")
         }
