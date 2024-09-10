@@ -55,6 +55,7 @@ public enum CashIcons {
     case arrowDown
     case creditCard
     case debitCard
+    case withoutCash
     
     public var image: Image {
         switch self {
@@ -152,6 +153,8 @@ public enum CashIcons {
             Image("tarjeta-de-credito", bundle: .module)
         case .debitCard:
             Image("tarjeta-de-debito", bundle: .module)
+        case .withoutCash:
+            Image("sin_dinero", bundle: .module)
         }
     }
     

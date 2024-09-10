@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "sin_dinero.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -16,6 +16,7 @@
 		873192EA2C7650BE008773DF /* TextComponentDemoview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873192E82C7650BE008773DF /* TextComponentDemoview.swift */; };
 		873192EB2C7650BE008773DF /* TextFieldsDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873192E92C7650BE008773DF /* TextFieldsDemoView.swift */; };
 		873192EF2C765101008773DF /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 873192ED2C7650D9008773DF /* DesignSystem */; };
+		8764EFD92C908C93008B95A7 /* ErrorComponentDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8764EFD82C908C93008B95A7 /* ErrorComponentDemoView.swift */; };
 		EF36D7BE37BE7E20F6343302 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B7B3729A05AF5A62BC7D692 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		873192E42C7650B4008773DF /* ButtonsComponentDemoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsComponentDemoView.swift; sourceTree = "<group>"; };
 		873192E82C7650BE008773DF /* TextComponentDemoview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextComponentDemoview.swift; sourceTree = "<group>"; };
 		873192E92C7650BE008773DF /* TextFieldsDemoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldsDemoView.swift; sourceTree = "<group>"; };
+		8764EFD82C908C93008B95A7 /* ErrorComponentDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorComponentDemoView.swift; sourceTree = "<group>"; };
 		E28CC7C955985ACFB50ED5B8 /* DesignSystemDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignSystemDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 				733F6DC4BEA8A354927989EB /* DesignSystemDemo.swift */,
 				0BE071DB0EBFF93F7D096D72 /* Preview Content */,
 				0EB85416910AF7AD3F3EC1F9 /* Resources */,
+				8764EFD82C908C93008B95A7 /* ErrorComponentDemoView.swift */,
 			);
 			path = DesignSystemDemo;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				873192E52C7650B4008773DF /* CellsComponentDemoview.swift in Sources */,
 				3836D4C53E2208FBAF63AE4A /* ContentView.swift in Sources */,
 				0D9A7F00C3D774841332E576 /* DesignSystemDemo.swift in Sources */,
+				8764EFD92C908C93008B95A7 /* ErrorComponentDemoView.swift in Sources */,
 				873192EA2C7650BE008773DF /* TextComponentDemoview.swift in Sources */,
 				873192EB2C7650BE008773DF /* TextFieldsDemoView.swift in Sources */,
 				873192E62C7650B4008773DF /* BalanceCardViewComponentDemoview.swift in Sources */,
