@@ -44,7 +44,10 @@ public struct GenericTextField: View {
             .font(.system(size: configuration.fontSize.rawValue))
             .foregroundColor(configuration.textColor)
             .background(configuration.backgroundColor)
-            .cornerRadius(configuration.cornerRadius.rawValue)
+            .overlay(
+                RoundedRectangle(cornerRadius: configuration.cornerRadius.rawValue)
+                    .stroke(Color.gray, lineWidth: 1)
+            )
         }
     }
 }
