@@ -72,7 +72,7 @@ public struct MenuTextField: View {
                     .foregroundStyle(.white)
             }
             .padding()
-            .background(.purple.opacity(0.65))
+            .background(backgroundColor.opacity(0.65))
             .cornerRadius(8)
         }
     }
@@ -87,7 +87,7 @@ struct MenuTextField_Previews: PreviewProvider {
                 .init(title: "Tarjeta de Crédito", icon: .creditCard),
                 .init(title: "Tarjeta de Débito", icon: .debitCard)
             ],
-            backgroundColor: .purple.opacity(0.65),
+            backgroundColor: .purple,
             titleColor: .white)
             .padding()
             .previewLayout(.sizeThatFits)

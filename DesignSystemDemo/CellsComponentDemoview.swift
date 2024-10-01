@@ -8,28 +8,34 @@
 import SwiftUI
 import DesignSystem
 
+struct TestItems: Identifiable {
+    let id = UUID()
+    var title: String
+    var subtitle: String
+    var money: String
+}
+
 struct CellsComponentDemoview: View {
+    
+    var items: [TestItems] = [
+        TestItems(title: "Salario", subtitle: "Salario mensual del trabajo", money: "$120,000.00"),
+        TestItems(title: "Efectivo", subtitle: "Gasto en frutería semanal", money: "$600.00"),
+        TestItems(title: "Fondo de emergencia", subtitle: "Ahorro para fondo de emergencia", money: "$10,000.00")
+    ]
+    
     var body: some View {
         VStack {
             GenericText(configuration: .init(title: "Custom Cell", sizeTitle: .xxLargePlus2, isBold: true))
-            CellInfoView(
-                icon: .dollarIn,
-                titleConfiguration: .init(title: "Salario", sizeTitle: .large, isBold: true),
-                subtitleConfiguration: .init(title: "Salario mensual del trabajo"),
-                thirdTitleConfiguration: .init(title: "$120,000.00", colorTitle: .green, isBold: true)
-            )
-            CellInfoView(
-                icon: .dollarOut,
-                titleConfiguration: .init(title: "Efectivo", sizeTitle: .large, isBold: true),
-                subtitleConfiguration: .init(title: "Gasto en frutería semanal"),
-                thirdTitleConfiguration: .init(title: "$600.00", colorTitle: .red, isBold: true)
-            )
-            CellInfoView(
-                icon: .safeBox,
-                titleConfiguration: .init(title: "Fondo de emergencia", sizeTitle: .large, isBold: true),
-                subtitleConfiguration: .init(title: "Ahorro para fondo de emergencia"),
-                thirdTitleConfiguration: .init(title: "$10,000.00", colorTitle: .black, isBold: true)
-            )
+            List {
+                ForEach(items) { item in
+                    CellInfoView(
+                        icon: .dollarIn,
+                        titleConfiguration: .init(title: item.title, sizeTitle: .large, isBold: true),
+                        subtitleConfiguration: .init(title: item.subtitle),
+                        thirdTitleConfiguration: .init(title: item.money, colorTitle: .green, isBold: true)
+                    )
+                }
+            }
         }
     }
 }
