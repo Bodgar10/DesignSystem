@@ -15,8 +15,8 @@ import Foundation
 ///   - `title`: The title to be displayed for the option.
 ///   - `icon`: The icon associated with the option.
 public struct PickerOptions: Hashable {
-    let title: String
-    let icon: CashIcons
+    public let title: String
+    public let icon: CashIcons
     
     /// Initializes a new `PickerOptions` instance.
     ///
